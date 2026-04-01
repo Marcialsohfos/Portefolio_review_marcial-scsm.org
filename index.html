@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcial SOH - Data Management Specialist | Data Scientist</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Style supplémentaire pour une meilleure présentation */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Language Switcher */
+        .lang-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .lang-switch:hover {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        header blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #333;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #667eea;
+        }
+
+        /* Skills Tags */
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .skill-tag {
+            background: #e9ecef;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #495057;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+
+        .project-card h3 {
+            padding: 20px 20px 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            padding: 0 20px 15px;
+            color: #666;
+        }
+
+        .project-tags {
+            padding: 0 20px 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 0 20px 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #5a67d8;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .contact-info p {
+            margin: 15px 0;
+        }
+
+        .contact-info a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .lang-switch {
+                top: 10px;
+                right: 10px;
+                font-size: 0.9rem;
+                padding: 5px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Switcher Button -->
+    <div class="lang-switch" id="langSwitch">English</div>
+
+    <header>
+        <div class="container">
+            <h1 id="headerTitle">Data Management Specialist | Santé publique & Gouvernance des données</h1>
+            <blockquote id="headerQuote">
+                J'ai accompagné le Ministère de la Santé Publique du Cameroun dans la cartographie nationale des laboratoires et la mise en place d'outils de gestion des données de santé.
+            </blockquote>
+        </div>
+    </header>
+
+    <section id="skills" class="container">
+        <h2 id="skillsTitle">Compétences clés</h2>
+        <div class="skills-tags" id="skillsTags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Qgis</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Kobocollect</span>
+            <span class="skill-tag">MapitGit</span>
+            <span class="skill-tag">Gouvernance des données</span>
+            <span class="skill-tag">RGPD</span>
+            <span class="skill-tag">ETL</span>
+            <span class="skill-tag">Données géospatiales</span>
+            <span class="skill-tag">Santé publique</span>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 id="aboutTitle">À propos</h2>
+        <div id="aboutContent">
+            <p>Basé à Yaoundé, je suis spécialisé dans la gestion des données de santé publique et des données urbaines. Mon parcours est marqué par une expérience terrain au <strong>Service des Laboratoires du MINSANTE</strong>, où j'ai piloté la cartographie nationale des laboratoires et mis en place des systèmes de surveillance.</p>
+            <p>Convaincu que la donnée de santé doit être fiable et accessible pour éclairer les décisions, j'ai développé des outils (LogicAppAnalytics, application de gestion des doublons) qui sont aujourd'hui utilisés par d'autres data analysts.</p>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 id="projectsTitle">Mes projets</h2>
+        <div class="projects-grid" id="projectsGrid">
+            <!-- Projects will be dynamically populated -->
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 id="contactTitle">Me contacter</h2>
+        <div class="contact-info" id="contactInfo">
+            <p>📧 <a href="mailto:marcialteda@gmail.com">marcialteda@gmail.com / marcialteda@scsmaubmar.org</a></p>
+            <p>📱 +237 678 071 881</p>
+            <p>💼 <a href="https://www.linkedin.com/in/marcial-teda-71ab8437a/" target="_blank">LinkedIn</a></p>
+            <p>💻 <a href="https://github.com/Marcialsohfos/" target="_blank">GitHub</a></p>
+            <p>📄 <a href="assets/cv/cv-marcial.pdf" download>Télécharger mon CV</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p id="footerText">&copy; 2026 Marcial TEDA SOH FOSSI - Data Management Specialist</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language data
+        const translations = {
+            fr: {
+                headerTitle: "Data Management Specialist | Santé publique & Gouvernance des données",
+                headerQuote: "J'ai accompagné le Ministère de la Santé Publique du Cameroun dans la cartographie nationale des laboratoires et la mise en place d'outils de gestion des données de santé.",
+                skillsTitle: "Compétences clés",
+                aboutTitle: "À propos",
+                aboutContent: `
+                    <p>Basé à Yaoundé, je suis spécialisé dans la gestion des données de santé publique et des données urbaines. Mon parcours est marqué par une expérience terrain au <strong>Service des Laboratoires du MINSANTE</strong>, où j'ai piloté la cartographie nationale des laboratoires et mis en place des systèmes de surveillance.</p>
+                    <p>Convaincu que la donnée de santé doit être fiable et accessible pour éclairer les décisions, j'ai développé des outils (LogicAppAnalytics, application de gestion des doublons) qui sont aujourd'hui utilisés par d'autres data analysts.</p>
+                `,
+                projectsTitle: "Mes projets",
+                contactTitle: "Me contacter",
+                footerText: "© 2026 Marcial TEDA SOH FOSSI - Data Management Specialist",
+                projects: [
+                    {
+                        title: "Cartographie nationale des laboratoires",
+                        desc: "Appui technique au MINSANTE pour le recensement et la cartographie de tous les laboratoires du Cameroun.",
+                        tags: ["Qgis", "Kobocollect", "MINSANTE"],
+                        link: "projects/cartographie-laboratoires.html",
+                        img: "assets/images/projets/carto-labo.jpg"
+                    },
+                    {
+                        title: "LogicAppAnalytics",
+                        desc: "Application d'analyse rapide de données statistiques et géospatiales, utilisée par d'autres data analysts.",
+                        tags: ["Python", "R", "Développement"],
+                        link: "projects/logicappanalytics.html",
+                        img: "assets/images/projets/logicapp.jpg"
+                    },
+                    {
+                        title: "Application anti-doublons",
+                        desc: "Outil d'identification et résolution des doublons dans les grandes bases de données de laboratoires.",
+                        tags: ["Algorithmes", "Python", "Base de données"],
+                        link: "projects/gestion-doublons.html",
+                        img: "assets/images/projets/doublons.jpg"
+                    },
+                    {
+                        title: "Dashboards MAPE & Biosécurité",
+                        desc: "Tableaux de bord interactifs pour la surveillance des Maladies à Potentiel Épidémique.",
+                        tags: ["Power BI", "Tableau", "Santé publique"],
+                        link: "projects/dashboards-mape.html",
+                        img: "assets/images/projets/dashboards.jpg"
+                    },
+                    {
+                        title: "Application d'extraction",
+                        desc: "Outil permettant d'extraire des portions spécifiques de données selon des variables choisies.",
+                        tags: ["Python", "Base de données", "Optimisation"],
+                        link: "projects/extraction-donnees.html",
+                        img: "assets/images/projets/extraction.jpg"
+                    },
+                    {
+                        title: "Données urbaines et habitat",
+                        desc: "Gestion et analyse de bases de données urbaines, combinant statistiques et géospatial.",
+                        tags: ["MapitGit", "Qgis", "R"],
+                        link: "projects/donnees-urbaines.html",
+                        img: "assets/images/projets/urbaines.jpg"
+                    }
+                ]
+            },
+            en: {
+                headerTitle: "Data Scientist | Statistician-Demographer | Data Management Specialist",
+                headerQuote: "Expert in public health data systems and urban resilience, with proven experience in national laboratory mapping and automated data platforms for international organizations.",
+                skillsTitle: "Core Competencies",
+                aboutTitle: "Professional Summary",
+                aboutContent: `
+                    <p><strong>Expert Statistician-Demographer and Data Scientist</strong> with over 5 years of experience in high-impact statistical production, geospatial data management, and predictive modeling. Specialized in urban resilience and public health, with a proven track record of developing automated data platforms for national and international organizations (UNESCO, IFORD, MINEPAT). Proficient in R, Python, and advanced GIS tools to transform complex datasets into actionable policy insights.</p>
+                    <h3 style="margin-top: 20px;">Core Competencies</h3>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Data Science & ML:</strong> Predictive modeling (Random Forest, XGBoost), Stochastic processes, Impact assessment, Data mining.</li>
+                        <li><strong>Geospatial Analysis:</strong> GIS (ArcGIS, Q-GIS), Spatial autocorrelation, Georeferenced data collection, Remote sensing (Sentinel-2).</li>
+                        <li><strong>Programming & Frameworks:</strong> R (Excellent), Python (Excellent), SQL, Django, Streamlit, Power BI, Web Deployment (Netlify).</li>
+                        <li><strong>Tools:</strong> Kobo Collect, SurveyCTO, CSPro, Stata, SPSS, ONA.</li>
+                        <li><strong>Leadership:</strong> Project management, Monitoring & Evaluation (M&E), Team coordination in precarious housing areas.</li>
+                    </ul>
+                    <h3 style="margin-top: 20px;">Professional Experience</h3>
+                    <p><strong>Coordinator of Statistical & Geospatial Operations | BUCREP & MINHDU</strong><br>March 2025 – Present<br>Lead data collection operations in precarious housing areas of Yaoundé. Synchronize geospatial mapping with demographic indicators to support urban planning.</p>
+                    <p><strong>Data Science Consultant & Technical Supervisor | UNESCO / IFORD / MINEDUB</strong><br>May 2025 – June 2025<br>Supervised national mapping of laboratories for the Ministry of Public Health. Managed technical data collection for the "Plein Feux" project on basic learning in Cameroon.</p>
+                    <p><strong>Researcher & Data Manager | IFORD & PICHNET</strong><br>May 2021 – Present<br>Developed a road network data management application using Django and web technologies. Designed a demographic data projection tool hosted on Streamlit. Facilitated capacity building in Data Management and Power BI for NGOs.</p>
+                    <p><strong>Geospatial Data Supervisor | National Institute of Statistics (INS)</strong><br>July 2023<br>Supervised technical geospatial data collection on the Cameroonian road network.</p>
+                    <h3 style="margin-top: 20px;">Education</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Ph.D. Candidate in Demography | Burundi Doctoral School (Present)</li>
+                        <li>Master's Degree in Demographic Statistics | IFORD (University of Yaoundé 1), 2019</li>
+                        <li>Master's Degree in Mathematics (Stochastic Processes) | University of Yaoundé 1, 2016</li>
+                        <li>Bachelor's Degree in Mathematics | University of Yaoundé 1, 2015</li>
+                    </ul>
+                    <h3 style="margin-top: 20px;">Selected Publications & Projects</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>Author: "R for Data Management: Module 1" (Book under review).</li>
+                        <li>Article: "Contextual and Individual Factors Contributing to Food Insecurity in Cameroon" (Annales de l'IFORD, 2022).</li>
+                        <li>App: LabHP-Web – Monitoring urban vulnerability via web-based GIS interfaces.</li>
+                        <li>Conference: Presenter at the 9th African Population Conference (Lilongwe, 2024).</li>
+                    </ul>
+                    <h3 style="margin-top: 20px;">Languages</h3>
+                    <ul style="margin-left: 20px;">
+                        <li>French: Native | English: Professional Working Proficiency</li>
+                    </ul>
+                `,
+                projectsTitle: "My Projects",
+                contactTitle: "Contact Me",
+                footerText: "© 2026 Marcial TEDA SOH FOSSI - Data Scientist | Data Management Specialist",
+                projects: [
+                    {
+                        title: "National Laboratory Mapping",
+                        desc: "Technical support to MINSANTE for the census and mapping of all laboratories in Cameroon.",
+                        tags: ["Qgis", "Kobocollect", "MINSANTE"],
+                        link: "projects/cartographie-laboratoires.html",
+                        img: "assets/images/projets/carto-labo.jpg"
+                    },
+                    {
+                        title: "LogicAppAnalytics",
+                        desc: "Rapid statistical and geospatial data analysis application, used by other data analysts.",
+                        tags: ["Python", "R", "Development"],
+                        link: "projects/logicappanalytics.html",
+                        img: "assets/images/projets/logicapp.jpg"
+                    },
+                    {
+                        title: "Duplicate Management Application",
+                        desc: "Tool for identifying and resolving duplicates in large laboratory databases.",
+                        tags: ["Algorithms", "Python", "Database"],
+                        link: "projects/gestion-doublons.html",
+                        img: "assets/images/projets/doublons.jpg"
+                    },
+                    {
+                        title: "MAPE & Biosafety Dashboards",
+                        desc: "Interactive dashboards for surveillance of Epidemic-Prone Diseases.",
+                        tags: ["Power BI", "Tableau", "Public Health"],
+                        link: "projects/dashboards-mape.html",
+                        img: "assets/images/projets/dashboards.jpg"
+                    },
+                    {
+                        title: "Data Extraction Application",
+                        desc: "Tool to extract specific data portions based on selected variables.",
+                        tags: ["Python", "Database", "Optimization"],
+                        link: "projects/extraction-donnees.html",
+                        img: "assets/images/projets/extraction.jpg"
+                    },
+                    {
+                        title: "Urban Data & Housing",
+                        desc: "Management and analysis of urban databases, combining statistics and geospatial data.",
+                        tags: ["MapitGit", "Qgis", "R"],
+                        link: "projects/donnees-urbaines.html",
+                        img: "assets/images/projets/urbaines.jpg"
+                    }
+                ]
+            }
+        };
+
+        let currentLang = 'fr';
+
+        function updateSkillsTags(lang) {
+            const skillsContainer = document.getElementById('skillsTags');
+            const skills = lang === 'fr' ? 
+                ["Python", "R", "Qgis", "SQL", "Power BI", "Kobocollect", "MapitGit", "Gouvernance des données", "RGPD", "ETL", "Données géospatiales", "Santé publique"] :
+                ["Python", "R", "QGIS", "SQL", "Power BI", "KoboCollect", "MapitGit", "Data Governance", "GDPR", "ETL", "Geospatial Data", "Public Health", "Predictive Modeling", "Random Forest", "XGBoost", "Streamlit", "Django"];
+            
+            skillsContainer.innerHTML = skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('');
+        }
+
+        function updateProjects(lang) {
+            const projectsGrid = document.getElementById('projectsGrid');
+            const projectsData = translations[lang].projects;
+            
+            projectsGrid.innerHTML = projectsData.map(project => `
+                <div class="project-card">
+                    <img src="${project.img}" alt="${project.title}">
+                    <h3>${project.title}</h3>
+                    <p>${project.desc}</p>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <a href="${project.link}" class="btn">${lang === 'fr' ? 'Voir le projet →' : 'View Project →'}</a>
+                </div>
+            `).join('');
+        }
+
+        function updateContact(lang) {
+            const contactDiv = document.getElementById('contactInfo');
+            if (lang === 'fr') {
+                contactDiv.innerHTML = `
+                    <p>📧 <a href="mailto:marcialteda@gmail.com">marcialteda@gmail.com / marcialteda@scsmaubmar.org</a></p>
+                    <p>📱 +237 678 071 881</p>
+                    <p>💼 <a href="https://www.linkedin.com/in/marcial-teda-71ab8437a/" target="_blank">LinkedIn</a></p>
+                    <p>💻 <a href="https://github.com/Marcialsohfos/" target="_blank">GitHub</a></p>
+                    <p>📄 <a href="assets/cv/cv-marcial.pdf" download>Télécharger mon CV</a></p>
+                `;
+            } else {
+                contactDiv.innerHTML = `
+                    <p>📧 <a href="mailto:marcialteda@gmail.com">marcialteda@gmail.com / marcialteda@scsmaubmar.org</a></p>
+                    <p>📱 +237 678 071 881</p>
+                    <p>💼 <a href="https://www.linkedin.com/in/marcial-teda-71ab8437a/" target="_blank">LinkedIn</a></p>
+                    <p>💻 <a href="https://github.com/Marcialsohfos/" target="_blank">GitHub</a></p>
+                    <p>📄 <a href="assets/cv/cv-marcial.pdf" download>Download my CV</a></p>
+                `;
+            }
+        }
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            const t = translations[lang];
+            
+            document.getElementById('headerTitle').innerHTML = t.headerTitle;
+            document.getElementById('headerQuote').innerHTML = t.headerQuote;
+            document.getElementById('skillsTitle').innerHTML = t.skillsTitle;
+            document.getElementById('aboutTitle').innerHTML = t.aboutTitle;
+            document.getElementById('aboutContent').innerHTML = t.aboutContent;
+            document.getElementById('projectsTitle').innerHTML = t.projectsTitle;
+            document.getElementById('contactTitle').innerHTML = t.contactTitle;
+            document.getElementById('footerText').innerHTML = t.footerText;
+            
+            updateSkillsTags(lang);
+            updateProjects(lang);
+            updateContact(lang);
+            
+            document.getElementById('langSwitch').innerHTML = lang === 'fr' ? 'English' : 'Français';
+            document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
+        }
+
+        // Detect browser language
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('fr')) {
+                return 'fr';
+            }
+            return 'en';
+        }
+
+        // Initialize
+        const detectedLang = detectLanguage();
+        updateLanguage(detectedLang);
+        
+        // Add event listener to language switcher
+        document.getElementById('langSwitch').addEventListener('click', () => {
+            const newLang = currentLang === 'fr' ? 'en' : 'fr';
+            updateLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
