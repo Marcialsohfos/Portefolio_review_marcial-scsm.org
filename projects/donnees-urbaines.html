@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des données urbaines et d'habitat - Marcial SOH</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gestion des données urbaines et d'habitat</h1>
+            <p>Données statistiques et géospatiales</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="back-link">
+            <a href="../index.html">← Retour à l'accueil</a>
+        </div>
+
+        <div class="project-detail">
+            <!-- SECTION IMAGE - À CORRIGER SELON VOTRE FICHIER -->
+            <img src="../assets/images/projets/urbaines.jpg" alt="Carte urbaine" onerror="this.style.display='none'">
+            <!-- Note: Si l'image ne charge pas, elle sera cachée -->
+
+            <h2>Contexte</h2>
+            <p>En complément de mon travail sur les données de santé, j'ai développé une expertise dans la gestion des <strong>données urbaines et d'habitat</strong>, un domaine où la combinaison d'analyses statistiques et géospatiales est essentielle pour la planification territoriale et les politiques publiques.</p>
+
+            <!-- SECTION LIEUX D'APPLICATION - MODIFIEZ ICI -->
+            <div class="app-links" style="background: #e3f2fd; border-left: 4px solid #2196f3;">
+                <h3 style="color: #0d47a1;">🚀 Accéder à l'application</h3>
+                <p>Visualisez l'application de données urbaines :</p>
+                <a href="https://huggingface.co/spaces/sohfossted/urban_aiplushv5" target="_blank" style="background: #2196f3; display: inline-block; margin: 0.5rem; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px;">
+                    🌆 Lancer Urban AI Plus (v5)
+                </a>
+                <a href="https://github.com/Marcialsohfos/urban_ai_plus" target="_blank" style="background: #24292e; display: inline-block; margin: 0.5rem; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px;">
+                    💻 Code source
+                </a>
+            </div>
+
+            <h2>Types de données gérées</h2>
+            
+            <h3>Données démographiques</h3>
+            <ul>
+                <li>Population par quartier et par zone</li>
+                <li>Densité de population</li>
+                <li>Structure par âge et par sexe</li>
+                <li>Migrations et dynamiques urbaines</li>
+            </ul>
+
+            <!-- Reste du contenu identique -->
+            <h3>Données d'habitat</h3>
+            <ul>
+                <li>Types de logements (maisons, appartements, habitats précaires)</li>
+                <li>Statut d'occupation (propriétaire, locataire)</li>
+                <li>Matériaux de construction</li>
+                <li>Accès aux services (eau, électricité, assainissement)</li>
+            </ul>
+
+            <h3>Infrastructures urbaines</h3>
+            <ul>
+                <li>Équipements publics (écoles, centres de santé)</li>
+                <li>Réseaux (voirie, transport, électricité)</li>
+                <li>Services (marchés, espaces verts)</li>
+            </ul>
+
+            <h3>Données géospatiales</h3>
+            <ul>
+                <li>Parcelles cadastrales</li>
+                <li>Quartiers et limites administratives</li>
+                <li>Occupation du sol</li>
+                <li>Images satellites</li>
+            </ul>
+
+            <h2>Méthodologie</h2>
+
+            <h3>Collecte</h3>
+            <ul>
+                <li>Utilisation de <strong>MapitGit</strong> pour la gestion collaborative des données spatiales</li>
+                <li>Intégration de sources multiples (enquêtes terrain, recensements, images satellites, OpenStreetMap)</li>
+                <li>Validation terrain avec <strong>Kobocollect</strong> sur tablettes</li>
+                <li>Numérisation de plans papier</li>
+            </ul>
+
+            <h3>Traitement et analyse</h3>
+            <ul>
+                <li><strong>Qgis</strong> pour l'analyse spatiale, la cartographie et la géoprocessing</li>
+                <li><strong>R</strong> avec les packages sf, tidyverse, ggplot2 pour les analyses statistiques</li>
+                <li><strong>Python</strong> (GeoPandas, Shapely, Fiona) pour l'automatisation des traitements</li>
+                <li><strong>PostGIS</strong> pour le stockage et les requêtes spatiales</li>
+            </ul>
+
+            <h3>Restitution</h3>
+            <ul>
+                <li>Cartes thématiques de l'habitat et des services urbains</li>
+                <li>Analyses de couverture des équipements (buffers, accessibilité)</li>
+                <li>Indicateurs de développement urbain (IDH local, indice de vulnérabilité)</li>
+                <li>Atlas urbains interactifs</li>
+            </ul>
+
+            <h2>Technologies utilisées</h2>
+            <div class="skills-tags">
+                <span class="skill-tag">MapitGit</span>
+                <span class="skill-tag">Qgis</span>
+                <span class="skill-tag">R</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">PostGIS</span>
+                <span class="skill-tag">Kobocollect</span>
+                <span class="skill-tag">GeoPandas</span>
+                <span class="skill-tag">Leaflet</span>
+            </div>
+
+            <!-- SECTION LIEUX SUPPLÉMENTAIRES -->
+            <div class="app-links" style="margin-top: 2rem;">
+                <h3>🔗 Autres ressources</h3>
+                <a href="https://carte-urbaine-demo.netlify.app" target="_blank">🗺️ Carte interactive de Yaoundé</a>
+                <a href="https://github.com/votreusername/donnees-urbaines" target="_blank">📊 Scripts et analyses</a>
+                <a href="https://atlas-urbain.netlify.app" target="_blank">📚 Atlas urbain (démo)</a>
+            </div>
+
+            <h2>Projets spécifiques réalisés</h2>
+
+            <h3>Analyse de l'habitat précaire à Yaoundé</h3>
+            <ul>
+                <li>Cartographie des zones d'habitat non planifié</li>
+                <li>Caractérisation par type de vulnérabilité</li>
+                <li>Recommandations pour les politiques d'amélioration</li>
+            </ul>
+
+            <h3>Accessibilité aux services de santé en zone urbaine</h3>
+            <ul>
+                <li>Calcul des isochrones (temps d'accès) aux centres de santé</li>
+                <li>Identification des zones sous-desservies</li>
+                <li>Croisement avec données démographiques</li>
+            </ul>
+
+            <h3>Base de données urbaine de référence</h3>
+            <ul>
+                <li>Consolidation de 15 sources de données</li>
+                <li>Standardisation des géométries et attributs</li>
+                <li>Mise à disposition via API pour les urbanistes</li>
+            </ul>
+
+            <h2>Résultats et impact</h2>
+            <ul>
+                <li><strong>Base de données urbaine intégrée</strong> couvrant 10 villes du Cameroun</li>
+                <li><strong>Atlas urbain</strong> utilisé par 3 municipalités pour la planification</li>
+                <li><strong>Gain de temps</strong> : 70% pour les urbanistes dans l'accès aux données</li>
+                <li><strong>Aide à la décision</strong> pour l'allocation des ressources d'urbanisme</li>
+            </ul>
+
+            <!-- SECTION IMAGES SUPPLEMENTAIRES - À CORRIGER SELON VOS FICHIERS -->
+            <h2>Captures d'écran</h2>
+            <img src="../assets/images/projets/urbaines-carte1.jpg" alt="Carte de l'habitat" onerror="this.style.display='none'">
+            <img src="../assets/images/projets/urbaines-analyse.jpg" alt="Analyse d'accessibilité" onerror="this.style.display='none'">
+            <img src="../assets/images/projets/urbaines-dashboard.jpg" alt="Dashboard urbain" onerror="this.style.display='none'">
+            
+            <div class="back-link">
+                <a href="../index.html">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Marcial SOH - Data Management Specialist</p>
+        </div>
+    </footer>
+</body>
+</html>

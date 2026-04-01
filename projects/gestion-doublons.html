@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application de gestion des doublons - Marcial SOH</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Application de gestion des doublons</h1>
+            <p>Qualité des données - MINSANTE</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="back-link">
+            <a href="../index.html">← Retour à l'accueil</a>
+        </div>
+
+        <div class="project-detail">
+            <img src="../assets/images/projets/doublons.jpg" alt="Interface de l'application anti-doublons">
+
+            <h2>Contexte</h2>
+            <p>Les grandes bases de données de laboratoires souffraient d'un problème récurrent de doublons, rendant les analyses peu fiables et compliquant le suivi des infrastructures. La détection manuelle était impossible face au volume de données (plus de 50 000 enregistrements).</p>
+
+            <h2>Problématique</h2>
+            <ul>
+                <li>Des milliers d'enregistrements avec des doublons potentiels</li>
+                <li>Différentes sources de données avec des formats variés</li>
+                <li>Nécessité de préserver l'intégrité des données originales</li>
+                <li>Contraintes de temps pour le nettoyage</li>
+            </ul>
+
+            <h2>Solution développée</h2>
+            <p>J'ai conçu et développé une <strong>application spécialisée</strong> qui :</p>
+            <ol>
+                <li><strong>Identifie les doublons</strong> grâce à des algorithmes de matching fuzzy</li>
+                <li><strong>Propose des regroupements</strong> intelligents basés sur plusieurs critères</li>
+                <li><strong>Permet la validation</strong> par un opérateur avant fusion</li>
+                <li><strong>Conserve un historique</strong> des modifications</li>
+                <li><strong>Génère des rapports</strong> de qualité des données</li>
+            </ol>
+
+            <h2>Algorithmes utilisés</h2>
+            <ul>
+                <li><strong>Similarité de Levenshtein</strong> pour les chaînes de caractères</li>
+                <li><strong>Matching géographique</strong> pour les coordonnées proches</li>
+                <li><strong>Règles métier</strong> spécifiques aux laboratoires</li>
+                <li><strong>Apprentissage automatique</strong> (Random Forest) pour améliorer la précision</li>
+                <li><strong>Détection phonétique</strong> (Soundex, Metaphone) pour les noms</li>
+            </ul>
+
+            <h2>Interface utilisateur</h2>
+            <ul>
+                <li>Tableau de bord avec métriques de qualité</li>
+                <li>Visualisation des clusters de doublons</li>
+                <li>Validation en un clic des fusions proposées</li>
+                <li>Mode batch pour les gros volumes</li>
+                <li>Export des données nettoyées</li>
+            </ul>
+
+            <h2>Technologies utilisées</h2>
+            <div class="skills-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Django</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Pandas</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">D3.js</span>
+            </div>
+
+            <h2>Résultats chiffrés</h2>
+            <ul>
+                <li><strong>98% des doublons détectés</strong> (précision mesurée sur un échantillon test)</li>
+                <li><strong>5 342 doublons identifiés</strong> dans la base principale</li>
+                <li><strong>Gain de temps</strong> : 3 mois de travail manuel évités</li>
+                <li><strong>Qualité des données</strong> : Augmentation de 35% de la confiance dans les données</li>
+            </ul>
+
+            <h2>Captures d'écran</h2>
+            <img src="../assets/images/projets/doublons-dashboard.jpg" alt="Dashboard de qualité">
+            <img src="../assets/images/projets/doublons-validation.jpg" alt="Interface de validation">
+            
+            <div class="back-link">
+                <a href="../index.html">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+<!-- SECTION LIEUX D'APPLICATION - À PERSONNALISER POUR CHAQUE PROJET -->
+<div class="app-links" style="background: #e3f2fd; border-left: 4px solid #2196f3; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
+    <h3 style="color: #0d47a1; margin-top: 0;">🚀 Accéder à l'application</h3>
+    <p style="margin-bottom: 1rem;">Testez l'application en ligne :</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <a href="https://rvldc2026-fuumks8rrrabsvce97r3ql.streamlit.app/" target="_blank" style="background: #2196f3; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            🌐 Lancer l'application
+        </a>
+        <a href="https://github.com/Marcialsohfos/" target="_blank" style="background: #24292e; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            💻 Code source
+        </a>
+        <a href="URL_DE_DEMO" target="_blank" style="background: #4caf50; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            📊 Démo interactive
+        </a>
+    </div>
+</div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Marcial SOH - Data Management Specialist</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application d'extraction de données - Marcial SOH</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Application d'extraction de données</h1>
+            <p>Extraction sur mesure de portions restreintes de données</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="back-link">
+            <a href="../index.html">← Retour à l'accueil</a>
+        </div>
+
+        <div class="project-detail">
+            <img src="../assets/images/projets/extraction.jpg" alt="Interface d'extraction">
+
+            <h2>Contexte</h2>
+            <p>Les analystes avaient souvent besoin de travailler sur des portions restreintes de données sans avoir à manipuler la masse totale des bases de laboratoires (plusieurs millions d'enregistrements), qui devenait trop volumineuse pour une analyse rapide sur des machines standards.</p>
+
+            <h2>Problématique</h2>
+            <ul>
+                <li>Bases de données trop volumineuses pour une analyse fluide (> 5 Go)</li>
+                <li>Temps de chargement et de traitement trop longs (plusieurs minutes)</li>
+                <li>Besoin de travailler sur des sous-ensembles pertinents</li>
+                <li>Contraintes de ressources informatiques (ordinateurs modestes)</li>
+                <li>Nécessité de garder la traçabilité des extractions</li>
+            </ul>
+
+            <h2>Solution</h2>
+            <p>Développement d'une <strong>application d'extraction sur mesure</strong> permettant :</p>
+
+            <h3>1. Sélection de variables</h3>
+            <ul>
+                <li>Choix interactif des colonnes à extraire</li>
+                <li>Préservation des relations entre tables</li>
+                <li>Export avec métadonnées</li>
+            </ul>
+
+            <h3>2. Filtres avancés</h3>
+            <ul>
+                <li>Par région, district, période</li>
+                <li>Par type de laboratoire, niveau</li>
+                <li>Par plage de dates, indicateurs spécifiques</li>
+                <li>Combinaison de critères (filtres booléens)</li>
+            </ul>
+
+            <h3>3. Extraction optimisée</h3>
+            <ul>
+                <li>Requêtes optimisées pour la performance</li>
+                <li>Traitement par lots pour les très gros volumes</li>
+                <li>Cache des extractions fréquentes</li>
+                <li>Parallélisation des requêtes</li>
+            </ul>
+
+            <h3>4. Export multi-formats</h3>
+            <ul>
+                <li>CSV, Excel, JSON, Shapefile</li>
+                <li>Compression automatique des fichiers</li>
+                <li>Export direct vers R/Python via API</li>
+            </ul>
+
+            <h2>Architecture technique</h2>
+            <ul>
+                <li><strong>Frontend</strong> : React.js avec interface intuitive</li>
+                <li><strong>Backend</strong> : FastAPI (Python) asynchrone</li>
+                <li><strong>Base de données</strong> : PostgreSQL avec optimisations</li>
+                <li><strong>Cache</strong> : Redis pour les requêtes fréquentes</li>
+                <li><strong>File d'attente</strong> : Celery pour les extractions longues</li>
+            </ul>
+
+            <h2>Technologies utilisées</h2>
+            <div class="skills-tags">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Celery</span>
+                <span class="skill-tag">Docker</span>
+            </div>
+
+            <h2>Résultats</h2>
+            <ul>
+                <li><strong>Gain de temps</strong> : 85% de réduction du temps d'attente</li>
+                <li><strong>Volume réduit</strong> : Extractions 90% plus légères que la base complète</li>
+                <li><strong>Adoption</strong> : 100% des analystes l'utilisent quotidiennement</li>
+                <li><strong>Satisfaction</strong> : Note de 4.8/5 auprès des utilisateurs</li>
+            </ul>
+
+            <h2>Exemple d'utilisation</h2>
+            <pre style="background: #f6f8fa; padding: 1rem; border-radius: 5px;">
+# L'analyste peut faire en 2 clics ce qui prenait 30 minutes :
+1. Sélection : "Région = Centre, Période = 2025"
+2. Variables : "Laboratoire, Cas suspects, Confirmés"
+3. Export : "Excel"
+4. Résultat : Fichier de 2 Mo prêt à l'analyse
+            </pre>
+
+            <h2>Captures d'écran</h2>
+            <img src="../assets/images/projets/extraction-interface.jpg" alt="Interface de sélection">
+            <img src="../assets/images/projets/extraction-resultat.jpg" alt="Résultat d'extraction">
+            
+            <div class="back-link">
+                <a href="../index.html">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </main>
+
+<!-- SECTION LIEUX D'APPLICATION - À PERSONNALISER POUR CHAQUE PROJET -->
+<div class="app-links" style="background: #e3f2fd; border-left: 4px solid #2196f3; padding: 1.5rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
+    <h3 style="color: #0d47a1; margin-top: 0;">🚀 Accéder à l'application</h3>
+    <p style="margin-bottom: 1rem;">Testez l'application en ligne :</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+        <a href="https://generateextractfilefor-analysiseng-cxda5gwagtp6jgp9atann4.streamlit.app/" target="_blank" style="background: #2196f3; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            🌐 Lancer l'application
+        </a>
+        <a href="https://github.com/Marcialsohfos/" target="_blank" style="background: #24292e; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            💻 Code source
+        </a>
+        <a href="URL_DE_DEMO" target="_blank" style="background: #4caf50; padding: 0.8rem 1.5rem; color: white; text-decoration: none; border-radius: 5px; display: inline-flex; align-items: center; gap: 0.5rem;">
+            📊 Démo interactive
+        </a>
+    </div>
+</div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Marcial SOH - Data Management Specialist</p>
+        </div>
+    </footer>
+</body>
+</html>
