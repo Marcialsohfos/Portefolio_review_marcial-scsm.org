@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    line-height: 1.6;
+    color: #24292e;
+    background-color: #f6f8fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+header blockquote {
+    font-size: 1.3rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-left: 4px solid rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    border-radius: 0 10px 10px 0;
+}
+
+/* Sections */
+section {
+    margin: 3rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e1e4e8;
+}
+
+/* Skills tags */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.skill-tag {
+    background: #e1e4e8;
+    color: #24292e;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #d1d5da;
+    transition: all 0.3s;
+}
+
+.skill-tag:hover {
+    background: #667eea;
+    color: white;
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* Projects grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.project-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    color: #24292e;
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+    color: #586069;
+    flex-grow: 1;
+}
+
+.project-tags {
+    padding: 0 1rem 1rem;
+}
+
+.tag {
+    display: inline-block;
+    background: #f1f8ff;
+    color: #0366d6;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    margin: 0 1rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s;
+    text-align: center;
+    align-self: flex-start;
+}
+
+.btn:hover {
+    background: #5a67d8;
+    color: white;
+}
+
+/* Contact section */
+.contact-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e1e4e8;
+}
+
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #24292e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+/* Project page specific */
+.project-detail {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #e1e4e8;
+    margin: 2rem 0;
+}
+
+.project-detail img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-detail h2 {
+    margin-top: 2rem;
+}
+
+.project-detail ul, .project-detail ol {
+    margin-left: 2rem;
+}
+
+.app-links {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: #f1f8ff;
+    border-radius: 8px;
+}
+
+.app-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.app-links a:hover {
+    background: #5a67d8;
+}
+
+.back-link {
+    margin: 2rem 0;
+}
+
+.back-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header blockquote {
+        font-size: 1.1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
